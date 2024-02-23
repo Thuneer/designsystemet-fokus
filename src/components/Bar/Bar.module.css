@@ -46,3 +46,9 @@
   align-items: center;
   gap: 10px;
 }
+
+.home {
+  color: white;
+  margin-left: 16px;
+  position: absolute;
+}

@@ -2,6 +2,7 @@
 import classes from "./Header.module.css";
 import { Container } from "react-bootstrap";
 import { Button } from "@digdir/design-system-react";
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -35,10 +36,12 @@ export const Header = () => {
           </ul>
         </div>
         <div className={classes.right}>
-          <Button variant="secondary" size="small">
-            Registrer ny bruker
+          <Button variant="secondary" size="small" asChild>
+            <Link href="/login">Registrer ny bruker</Link>
           </Button>
-          <Button size="small">Registrer ny bruker</Button>
+          <Button size="small" asChild>
+            <Link href="/login">Registrer ny bruker</Link>
+          </Button>
         </div>
       </Container>
     </header>

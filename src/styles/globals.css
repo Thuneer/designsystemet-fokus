@@ -9,7 +9,8 @@
 }
 
 body {
-  color: var(--fds-semantic-text-neutral-default);
+  color: var(--fds-semantic-text-neutral-default) !important;
+  background-color: var(--fds-semantic-background-subtle) !important;
 }
 
 body.darkmode {
