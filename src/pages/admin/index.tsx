@@ -7,7 +7,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { Bar } from "@/components/Bar/Bar";
-import classes from "./index.module.css";
+import classes from "./Dashboard.module.css";
 import {
   Heading,
   Ingress,
@@ -15,6 +15,7 @@ import {
   Card,
   Paragraph,
 } from "@digdir/design-system-react";
+import { Sidebar } from "@/components/sidebar/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,15 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <Bar />
-        Dashboard
+        <div className={classes.page}>
+          <div className={classes.sidebar}>
+            <Sidebar />
+          </div>
+          <div className={classes.main}>
+            <div className={classes.left}>left</div>
+            <div className={classes.right}>right</div>
+          </div>
+        </div>
       </main>
     </>
   );

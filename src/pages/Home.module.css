@@ -1,0 +1,33 @@
+.page {
+  margin-top: 64px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.header img {
+  width: 80px;
+  margin-bottom: 24px;
+}
+
+.cards {
+}
+
+.card {
+  background-color: white;
+  display: block;
+  box-shadow: var(--fds-shadow-xsmall);
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.cardContent {
+  padding: 32px;
+  border-top: 1px solid rgb(233, 233, 233);
+}
+
+.img {
+  max-width: 100%;
+}

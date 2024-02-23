@@ -1,0 +1,32 @@
+.page {
+}
+
+.sidebar {
+  width: 300px;
+  height: calc(100vh - 0px);
+  background-color: var(--foreground-color);
+}
+
+.main {
+  position: absolute;
+  left: 332px;
+  top: 32px;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  gap: 32px;
+}
+
+.left {
+  background-color: var(--foreground-color);
+  width: 100%;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.right {
+  background-color: var(--foreground-color);
+  width: 450px;
+  border-radius: 4px;
+  padding: 24px;
+}

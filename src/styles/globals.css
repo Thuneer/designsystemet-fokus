@@ -5,7 +5,8 @@
   --fds-semantic-border-focus-boxshadow: white !important;
   --background-darkest: var(--fds-semantic-text-neutral-default);
   --background-darker: #2e3d50;
-  --background-dark: red;
+  --background-color: var(--fds-semantic-background-subtle);
+  --foreground-color: white;
 }
 
 body {
@@ -15,6 +16,8 @@ body {
 
 body.darkmode {
   background-color: var(--background-darkest) !important;
+  --background-color: var(--fds-semantic-text-neutral-default);
+  --foreground-color: #2e3d50;
 }
 
 body.darkmode a[class^="fds-card-card"] {
@@ -64,9 +67,9 @@ body.darkmode div[class^="Bar_bar"] {
 body.darkmode div[class^="Bar_heading"] {
   color: var(--fds-semantic-text-neutral-default) !important;
 }
-body.darkmode button[class^="Bar_btn"] {
+body.darkmode *[class^="Bar_btn"] {
   color: var(--fds-semantic-text-neutral-default) !important;
 }
-body.darkmode button[class*="Bar_active"] {
-  color: white !important;
+body.darkmode *[class*="Bar_active"] {
+  color: var(--fds-semantic-text-neutral-default) !important;
 }

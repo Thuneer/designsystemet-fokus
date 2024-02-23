@@ -1,10 +1,10 @@
 .banner {
   background-color: var(--fds-brand-alt3-300);
-  padding: 76px 0;
+  padding: 72px 0;
 }
 
 .banner img {
-  width: 63%;
+  width: 60%;
 }
 
 .bannerContainer {

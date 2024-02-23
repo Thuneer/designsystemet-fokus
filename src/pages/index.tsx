@@ -7,7 +7,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { Bar } from "@/components/Bar/Bar";
-import classes from "./index.module.css";
+import classes from "./Home.module.css";
 import {
   Heading,
   Ingress,
@@ -15,6 +15,8 @@ import {
   Card,
   Paragraph,
 } from "@digdir/design-system-react";
+import { Sidebar } from "@/components/sidebar/Sidebar";
+import NextLink from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,101 +30,34 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Bar />
-        <Header />
-        <div className={classes.banner}>
-          <Container className={classes.bannerContainer}>
-            <Row className={classes.bannerRow}>
-              <Col className={classes.bannerLeft}>
-                <img src="img/ill.svg" alt="" />
-              </Col>
-              <Col className={classes.bannerRight}>
-                <Heading size="large">Digitalisering av Norge</Heading>
-                <Ingress>
-                  The and you of an the and, want odd else even should at that
-                  or select but parts which him sooner world is founding of to
-                  some address your influenced himself are in, he by everyday
-                </Ingress>
-                <Link href="#">Les mer om digitalisering</Link>
-              </Col>
-            </Row>
-          </Container>
+        <div className={classes.page}>
+          <div className={classes.header}>
+            <img src="img/ds-logo.svg" alt="" />
+            <Heading size="large">Demo applikasjoner</Heading>
+          </div>
+          <div className={classes.cards}>
+            <Container>
+              <Row className="gx-5">
+                <Col>
+                  <NextLink href="/website" className={classes.card}>
+                    <img src="img/website.png" alt="" className={classes.img} />
+                    <div className={classes.cardContent}>
+                      <Heading size="small">Tradisjonell nettside</Heading>
+                    </div>
+                  </NextLink>
+                </Col>
+                <Col>
+                  <NextLink href="/admin" className={classes.card}>
+                    <img src="img/admin.png" alt="" className={classes.img} />
+                    <div className={classes.cardContent}>
+                      <Heading size="small">Admin grensesnitt</Heading>
+                    </div>
+                  </NextLink>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         </div>
-
-        <div className={classes.cards}>
-          <Heading size="large" className={classes.cardsHeading}>
-            Hva kan vi hjelpe deg med?
-          </Heading>
-          <Container>
-            <Row>
-              <Col>
-                <Card asChild color="neutral" isLink>
-                  <a
-                    href="https://designsystemet.no"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <Card.Media>
-                      <img alt="katt 2" src="img/landscape1.png" />
-                    </Card.Media>
-                    <Card.Header>
-                      <Heading size="small">Tilgjengelighet</Heading>
-                    </Card.Header>
-                    <Card.Content>
-                      Most provide as with carried business are much better more
-                      the perfected designer. Writing slightly explain desk
-                      unable at supposedly about this
-                    </Card.Content>
-                  </a>
-                </Card>
-              </Col>
-              <Col>
-                <Card asChild color="neutral" isLink>
-                  <a
-                    href="https://designsystemet.no"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <Card.Media>
-                      <img alt="katt 2" src="img/landscape2.png" />
-                    </Card.Media>
-                    <Card.Header>
-                      <Heading size="small">Lær om data deling</Heading>
-                    </Card.Header>
-                    <Card.Content>
-                      Most provide as with carried business are much better more
-                      the perfected designer. Writing slightly explain desk
-                      unable at supposedly about this
-                    </Card.Content>
-                  </a>
-                </Card>
-              </Col>
-              <Col>
-                <Card asChild color="neutral" isLink>
-                  <a
-                    href="https://designsystemet.no"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <Card.Media>
-                      <img alt="katt 2" src="img/landscape3.png" />
-                    </Card.Media>
-                    <Card.Header>
-                      <Heading size="small">Bli digital borger</Heading>
-                    </Card.Header>
-                    <Card.Content>
-                      Most provide as with carried business are much better more
-                      the perfected designer. Writing slightly explain desk
-                      unable at supposedly about this
-                    </Card.Content>
-                  </a>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-
-        <Footer />
       </main>
     </>
   );

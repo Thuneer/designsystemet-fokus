@@ -1,0 +1,30 @@
+.page {
+  margin: 72px;
+}
+
+.header {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.smallBody {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.heading {
+  margin-bottom: 24px !important;
+}
+
+.ingress {
+  margin-bottom: 72px !important;
+}
