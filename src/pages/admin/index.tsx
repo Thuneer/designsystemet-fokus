@@ -16,6 +16,7 @@ import {
   Paragraph,
 } from "@digdir/design-system-react";
 import { Sidebar } from "@/components/sidebar/Sidebar";
+import { Toolbar } from "@/components/Toolbar/Toolbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,9 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <Bar />
         <div className={classes.page}>
+          <div className={classes.toolbar}>
+            <Toolbar />
+          </div>
           <div className={classes.sidebar}>
             <Sidebar />
           </div>

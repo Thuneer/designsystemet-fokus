@@ -7,10 +7,21 @@
   background-color: var(--foreground-color);
 }
 
+.toolbar {
+  position: absolute;
+  left: 300px;
+  top: 0;
+  right: 0;
+  height: 54px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+}
+
 .main {
   position: absolute;
   left: 332px;
-  top: 32px;
+  top: 86px;
   bottom: 32px;
   right: 32px;
   display: flex;
