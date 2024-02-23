@@ -6,6 +6,7 @@ import {
   ChevronDownIcon,
   NewspaperIcon,
   PersonIcon,
+  CogIcon,
 } from "@navikt/aksel-icons";
 import NextLink from "next/link";
 import classes from "./Sidebar.module.css";
@@ -102,7 +103,7 @@ export const Sidebar = () => {
           </div>
           <div>
             <NextLink href="/dashboard" className={classes.link}>
-              <HouseIcon
+              <CogIcon
                 title="a11y-title"
                 fontSize="1.5rem"
                 className={classes.startIcon}
