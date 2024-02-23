@@ -1,0 +1,42 @@
+.banner {
+  background-color: var(--fds-brand-alt3-300);
+  padding: 76px 0;
+}
+
+.banner img {
+  width: 63%;
+}
+
+.bannerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.bannerRow {
+  display: flex;
+  align-items: center;
+}
+
+.bannerRight {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.bannerLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner a {
+  font-size: 18px;
+}
+
+.cards {
+  padding: 72px 0;
+}
+
+.cardsHeading {
+  text-align: center;
+  margin-bottom: 32px !important;
+}

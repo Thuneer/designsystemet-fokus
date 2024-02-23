@@ -1,0 +1,48 @@
+.bar {
+  background-color: var(--fds-semantic-text-neutral-default);
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font-weight: 500;
+  margin-right: 18px;
+}
+
+.btn {
+  border-radius: 100px;
+  border: none;
+  height: 34px;
+  padding: 0 15px;
+  background-color: transparent;
+  color: rgb(216, 216, 216);
+}
+
+.btn:hover {
+  color: white;
+}
+
+.active {
+  background-color: #3c4b60;
+  color: white;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

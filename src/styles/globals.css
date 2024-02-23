@@ -1,0 +1,52 @@
+:root {
+  --fds-semantic-border-focus-outline: var(
+    --fds-semantic-text-neutral-default
+  ) !important;
+  --fds-semantic-border-focus-boxshadow: white !important;
+  --background-darkest: var(--fds-semantic-text-neutral-default);
+  --background-darker: #2e3d50;
+  --background-dark: red;
+}
+
+body {
+  color: var(--fds-semantic-text-neutral-default);
+}
+
+body.darkmode {
+  background-color: var(--background-darkest) !important;
+}
+
+body.darkmode a[class^="fds-card-card"] {
+  background-color: var(--background-darker) !important;
+  color: white !important;
+  border: none !important;
+}
+
+body.darkmode a[class^="fds-card-card"] h1 {
+  color: white !important;
+}
+
+body.darkmode footer {
+  background-color: var(--background-darker) !important;
+}
+
+body.darkmode div[class^="index_banner"] {
+  background-color: var(--background-darker) !important;
+  color: white !important;
+}
+
+body.darkmode a[class^="fds-link"] {
+  color: white !important;
+}
+
+body.darkmode *[class^="fds-heading"] {
+  color: white !important;
+}
+
+body.darkmode p[class^="fds-ingress"] {
+  color: white !important;
+}
+
+body.darkmode a[class^="fds-link"] {
+  color: white !important;
+}
