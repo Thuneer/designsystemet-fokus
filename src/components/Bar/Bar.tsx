@@ -14,6 +14,7 @@ import "react-sliding-pane/dist/react-sliding-pane.css";
 import SlidingPane from "react-sliding-pane";
 import { Heading, Switch } from "@digdir/design-system-react";
 import NextLink from "next/link";
+import { Slider } from "@mui/material";
 
 export const Bar = () => {
   const [theme, setTheme] = useState("lightmode");
@@ -31,6 +32,48 @@ export const Bar = () => {
   const test = (e: any) => {
     setThemeFunc(e.target.checked ? "darkmode" : "lightmode");
   };
+
+  const marks = [
+    {
+      value: 0,
+      label: "0",
+    },
+    {
+      value: 20,
+      label: "2px",
+    },
+    {
+      value: 40,
+      label: "4px",
+    },
+    {
+      value: 60,
+      label: "8px",
+    },
+    {
+      value: 80,
+      label: "12px",
+    },
+    {
+      value: 100,
+      label: "16px",
+    },
+  ];
+
+  const marks2 = [
+    {
+      value: 0,
+      label: "Hvit",
+    },
+    {
+      value: 50,
+      label: "Transaprent",
+    },
+    {
+      value: 100,
+      label: "Gult",
+    },
+  ];
 
   return (
     <div className={classes.bar}>
@@ -54,6 +97,47 @@ export const Bar = () => {
           <ChevronLeftIcon title="a11y-title" fontSize="1.5rem" /> Alle demoer
         </NextLink>
         <Heading size="xsmall">Innstillinger</Heading>
+
+        <div className={classes.label}>Farger</div>
+
+        <div
+          className={cn(classes.colors, classes.colorsActive, classes.theme1)}
+        >
+          <span className={cn(classes.color, classes.red)}></span>
+          <span className={cn(classes.color, classes.red)}></span>
+          <span className={cn(classes.color, classes.red)}></span>
+          <span className={cn(classes.color, classes.red)}></span>
+          <span className={cn(classes.color, classes.red)}></span>
+        </div>
+
+        <div className={cn(classes.colors, classes.theme2)}>
+          <span className={cn(classes.color, classes.red)}></span>
+          <span className={cn(classes.color, classes.red)}></span>
+          <span className={cn(classes.color, classes.red)}></span>
+          <span className={cn(classes.color, classes.red)}></span>
+          <span className={cn(classes.color, classes.red)}></span>
+        </div>
+
+        <div className={classes.label}>Border radius</div>
+
+        <Slider
+          aria-label="Custom marks"
+          defaultValue={20}
+          step={20}
+          valueLabelDisplay="auto"
+          marks={marks}
+        />
+
+        <div className={classes.label}>Fokus typer</div>
+
+        <Slider
+          aria-label="Custom marks"
+          defaultValue={0}
+          step={50}
+          valueLabelDisplay="auto"
+          marks={marks2}
+        />
+
         <Switch position="left" size="medium" onChange={(e) => test(e)}>
           Darkmode
         </Switch>
