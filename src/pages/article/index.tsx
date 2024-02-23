@@ -14,7 +14,6 @@ import {
   Link,
   Card,
   Paragraph,
-  Accordion,
 } from "@digdir/design-system-react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -58,32 +57,6 @@ export default function Article() {
                 such take their wrong dropped his would the would came whats
                 their little. Him and which way last is the on its had and
               </Paragraph>
-
-              <Accordion color="neutral" border>
-                <Accordion.Item>
-                  <Accordion.Header level={3}>
-                    Hvem kan registrere seg i Frivillighetsregisteret?
-                  </Accordion.Header>
-                  <Accordion.Content>
-                    For å kunne bli registrert i Frivillighetsregisteret, må
-                    organisasjonen drive frivillig virksomhet. Det er bare
-                    foreninger, stiftelser og aksjeselskap som kan registreres.
-                    Virksomheten kan ikke dele ut midler til
-                  </Accordion.Content>
-                </Accordion.Item>
-                <Accordion.Item>
-                  <Accordion.Header level={3}>
-                    Hvordan går jeg fram for å registrere i
-                    Frivillighetsregisteret?
-                  </Accordion.Header>
-                  <Accordion.Content>
-                    Virksomheten må være registrert i Enhetsregisteret før den
-                    kan bli registrert i Frivillighetsregisteret. Du kan
-                    registrere i begge registrene samtidig i Samordnet
-                    registermelding.
-                  </Accordion.Content>
-                </Accordion.Item>
-              </Accordion>
 
               <Paragraph>
                 Was rippedup, but purpose chequered the stupid taking the fresh
