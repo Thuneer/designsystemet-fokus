@@ -50,3 +50,22 @@ body.darkmode p[class^="fds-ingress"] {
 body.darkmode a[class^="fds-link"] {
   color: white !important;
 }
+
+body.darkmode header[class^="Header_header"] {
+  background-color: var(--background-darkest) !important;
+  color: white !important;
+}
+
+body.darkmode div[class^="Bar_bar"] {
+  background-color: white !important;
+  color: white !important;
+}
+body.darkmode div[class^="Bar_heading"] {
+  color: var(--fds-semantic-text-neutral-default) !important;
+}
+body.darkmode button[class^="Bar_btn"] {
+  color: var(--fds-semantic-text-neutral-default) !important;
+}
+body.darkmode button[class*="Bar_active"] {
+  color: white !important;
+}
