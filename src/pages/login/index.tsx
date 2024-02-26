@@ -1,19 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
+
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import { Container, Row, Col } from "react-bootstrap";
-import { Header } from "@/components/Header/Header";
-import { Footer } from "@/components/Footer/Footer";
-import { Configurator } from "@/components/Configurator/Configurator";
+
+import { ConfigurationLayout } from "@/layouts/ConfigurationLayout";
 import classes from "./Login.module.css";
 import {
   Heading,
-  Ingress,
-  Link,
-  Card,
-  Paragraph,
   SkipLink,
   Textfield,
   Button,
@@ -35,7 +29,7 @@ export default function Login() {
       </Head>
       <SkipLink href="#main-content">Hopp til hovedinnhold</SkipLink>
       <main className={`${styles.main} ${inter.className}`}>
-        <Configurator>
+        <ConfigurationLayout>
           <div className={classes.container}>
             <div className={classes.form}>
               <Heading size="small">Registerer ny bruker</Heading>
@@ -74,7 +68,7 @@ export default function Login() {
               </Button>
             </div>
           </div>
-        </Configurator>
+        </ConfigurationLayout>
       </main>
     </>
   );

@@ -1,21 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
+
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { Header } from "@/components/Header/Header";
-import { Footer } from "@/components/Footer/Footer";
 
 import classes from "./Home.module.css";
-import {
-  Heading,
-  Ingress,
-  Link,
-  Card,
-  Paragraph,
-} from "@digdir/design-system-react";
-import { Sidebar } from "@/components/sidebar/Sidebar";
+import { Heading } from "@digdir/design-system-react";
+
 import NextLink from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });

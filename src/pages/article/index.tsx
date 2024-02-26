@@ -1,20 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
+
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { Header } from "@/components/Header/Header";
-import { Footer } from "@/components/Footer/Footer";
-import { Configurator } from "@/components/Configurator/Configurator";
+
+import { ConfigurationLayout } from "@/layouts/ConfigurationLayout";
 import classes from "./Article.module.css";
-import {
-  Heading,
-  Ingress,
-  Link,
-  Card,
-  Paragraph,
-} from "@digdir/design-system-react";
+import { Heading, Ingress, Paragraph } from "@digdir/design-system-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +21,7 @@ export default function Article() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Configurator>
+        <ConfigurationLayout>
           <div className={classes.page}>
             <div className={classes.header}>
               <Container>
@@ -71,7 +64,7 @@ export default function Article() {
               </div>
             </div>
           </div>
-        </Configurator>
+        </ConfigurationLayout>
       </main>
     </>
   );

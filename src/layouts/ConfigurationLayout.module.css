@@ -1,0 +1,55 @@
+.contentPadding {
+  width: calc(100vw - 400px) !important;
+}
+
+.content {
+  transition: 0.6s all;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.contentSmall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  bottom: 0;
+  width: 400px;
+  background-color: white;
+  z-index: 5;
+  padding: 32px;
+  box-shadow: var(--fds-shadow-small);
+  transition: 0.6s all;
+}
+
+.paneOpen {
+  right: 0;
+}
+
+.page {
+  position: relative;
+}
+
+.mobile {
+  width: 360px !important;
+  height: 700px !important;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 8px solid rgb(25, 39, 65);
+  position: relative;
+}
+
+.tablet {
+  width: 660px !important;
+  height: 840px !important;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 8px solid rgb(25, 39, 65);
+  position: relative;
+}
