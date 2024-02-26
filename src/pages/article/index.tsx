@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
-import { Bar } from "@/components/Configurator/Configurator";
+import { Configurator } from "@/components/Configurator/Configurator";
 import classes from "./Article.module.css";
 import {
   Heading,
@@ -28,46 +28,50 @@ export default function Article() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Bar />
-        <div className={classes.page}>
-          <div className={classes.header}>
-            <Container>
-              <Heading className={classes.heading}>
-                Train employees, raised seemed minutes he by distribe
-              </Heading>
-              <Ingress className={classes.ingress}>
-                Rain the even packed, as observed, the text trust however place
-                fortune. Great him in seven as made, consideration terms,
-                carpeting chosen into him seriously acting the clock, phase
-              </Ingress>
-            </Container>
-          </div>
-          <div className={classes.body}>
-            <div className={classes.smallBody}>
-              <Paragraph>
-                Was rippedup, but purpose chequered the stupid taking the fresh
-                for too, of the have out kind great participate to disguised he
-                such take their wrong dropped his would the would came whats
-                their little. Him and which way last is the on its had and
-              </Paragraph>
+        <Configurator>
+          <div className={classes.page}>
+            <div className={classes.header}>
+              <Container>
+                <Heading className={classes.heading}>
+                  Train employees, raised seemed minutes he by distribe
+                </Heading>
+                <Ingress className={classes.ingress}>
+                  Rain the even packed, as observed, the text trust however
+                  place fortune. Great him in seven as made, consideration
+                  terms, carpeting chosen into him seriously acting the clock,
+                  phase
+                </Ingress>
+              </Container>
+            </div>
+            <div className={classes.body}>
+              <div className={classes.smallBody}>
+                <Paragraph>
+                  Was rippedup, but purpose chequered the stupid taking the
+                  fresh for too, of the have out kind great participate to
+                  disguised he such take their wrong dropped his would the would
+                  came whats their little. Him and which way last is the on its
+                  had and
+                </Paragraph>
 
-              <Paragraph>
-                Was rippedup, but purpose chequered the stupid taking the fresh
-                for too, of the have out kind great participate to disguised he
-                such take their wrong dropped his would the would came whats
-                their little. Him and which way last is the on its had and
-              </Paragraph>
+                <Paragraph>
+                  Was rippedup, but purpose chequered the stupid taking the
+                  fresh for too, of the have out kind great participate to
+                  disguised he such take their wrong dropped his would the would
+                  came whats their little. Him and which way last is the on its
+                  had and
+                </Paragraph>
 
-              <Paragraph>
-                Was rippedup, but purpose chequered the stupid taking the fresh
-                for too, of the have out kind great participate to disguised he
-                such take their wrong dropped his would the would came whats
-                their little. Him and which way last is the on its had and
-              </Paragraph>
+                <Paragraph>
+                  Was rippedup, but purpose chequered the stupid taking the
+                  fresh for too, of the have out kind great participate to
+                  disguised he such take their wrong dropped his would the would
+                  came whats their little. Him and which way last is the on its
+                  had and
+                </Paragraph>
+              </div>
             </div>
           </div>
-        </div>
-        Article
+        </Configurator>
       </main>
     </>
   );
