@@ -3,8 +3,34 @@
   padding: 72px 0;
 }
 
-.banner img {
+.banner svg {
   width: 60%;
+  height: auto;
+}
+
+.banner svg path:nth-child(1),
+.banner svg path:nth-child(2),
+.banner svg path:nth-child(3) {
+  fill: var(--fds-brand-alt3-600);
+}
+
+.banner svg path:nth-child(4),
+.banner svg path:nth-child(6),
+.banner svg path:nth-child(7),
+.banner svg path:nth-child(8),
+.banner svg path:nth-child(25),
+.banner svg path:nth-child(24),
+.banner svg path:nth-child(27) {
+  fill: var(--fds-brand-alt2-600);
+}
+
+.banner svg path:nth-child(8),
+.banner svg path:nth-child(9),
+.banner svg path:nth-child(10),
+.banner svg path:nth-child(22),
+.banner svg path:nth-child(23),
+.banner svg path:nth-child(28) {
+  fill: var(--fds-brand-alt1-600);
 }
 
 .bannerContainer {

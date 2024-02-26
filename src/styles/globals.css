@@ -20,6 +20,10 @@ body.darkmode {
   --foreground-color: #2e3d50;
 }
 
+/**************************************
+ * Designsystemet components - Darkmode
+ **************************************/
+
 body.darkmode a[class^="fds-card-card"] {
   background-color: var(--background-darker) !important;
   color: white !important;
@@ -27,15 +31,6 @@ body.darkmode a[class^="fds-card-card"] {
 }
 
 body.darkmode a[class^="fds-card-card"] h1 {
-  color: white !important;
-}
-
-body.darkmode footer {
-  background-color: var(--background-darker) !important;
-}
-
-body.darkmode div[class^="index_banner"] {
-  background-color: var(--background-darker) !important;
   color: white !important;
 }
 
@@ -52,6 +47,19 @@ body.darkmode p[class^="fds-ingress"] {
 }
 
 body.darkmode a[class^="fds-link"] {
+  color: white !important;
+}
+
+/******************************
+ * Custom components - Darkmode
+ ******************************/
+
+body.darkmode footer {
+  background-color: var(--background-darker) !important;
+}
+
+body.darkmode div[class^="index_banner"] {
+  background-color: var(--background-darker) !important;
   color: white !important;
 }
 
@@ -72,6 +80,14 @@ body.darkmode *[class^="Bar_btn"] {
 }
 body.darkmode *[class*="Bar_active"] {
   color: var(--fds-semantic-text-neutral-default) !important;
+}
+
+body.darkmode *[class*="Header_header"] svg path {
+  fill: white !important;
+}
+
+body.darkmode *[class*="website_banner"] {
+  background-color: var(--background-darker) !important;
 }
 
 body.theme-tilsynet {
@@ -102,6 +118,9 @@ body.theme-tilsynet {
   --fds-brand-alt3-700: #4c907e;
   --fds-brand-alt3-800: #407d6d;
   --fds-brand-alt3-900: #376c5e;
+
+  --fds-semantic-surface-action-first-default: #1e2b3c !important;
+  --fds-semantic-surface-action-first-hover: #0d1621 !important;
 }
 
 body.theme-altinn {
