@@ -155,15 +155,15 @@ export const Configurator = () => {
               [classes.colorsActive]: configuration.colorTheme === "digdir",
             })}
           >
+            <Heading size="xxsmall" level={2}>
+              Digdir
+            </Heading>
             <div className={classes.colors}>
               <div className={classes.color}></div>
               <div className={classes.color}></div>
               <div className={classes.color}></div>
               <div className={classes.color}></div>
             </div>
-            <Heading size="xxsmall" level={2}>
-              Digdir
-            </Heading>
           </div>
 
           <div
@@ -172,15 +172,15 @@ export const Configurator = () => {
               [classes.colorsActive]: configuration.colorTheme === "tilsynet",
             })}
           >
+            <Heading size="xxsmall" level={2}>
+              Tilsynet
+            </Heading>
             <div className={classes.colors}>
               <div className={classes.color}></div>
               <div className={classes.color}></div>
               <div className={classes.color}></div>
               <div className={classes.color}></div>
             </div>
-            <Heading size="xxsmall" level={2}>
-              Tilsynet
-            </Heading>
           </div>
 
           <div
@@ -189,15 +189,15 @@ export const Configurator = () => {
               [classes.colorsActive]: configuration.colorTheme === "altinn",
             })}
           >
+            <Heading size="xxsmall" level={2}>
+              Altinn
+            </Heading>
             <div className={classes.colors}>
               <div className={classes.color}></div>
               <div className={classes.color}></div>
               <div className={classes.color}></div>
               <div className={classes.color}></div>
             </div>
-            <Heading size="xxsmall" level={2}>
-              Altinn
-            </Heading>
           </div>
         </div>
 
