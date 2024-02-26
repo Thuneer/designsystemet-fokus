@@ -32,7 +32,7 @@ export const Configurator = () => {
 
   const setFocus = (value: string) => {
     const val = value.toLocaleLowerCase();
-    setConfiguration({ ...configuration, colorTheme: val });
+    setConfiguration({ ...configuration, focus: val });
     document.body.classList.remove("focus-hvit");
     document.body.classList.remove("focus-transparent");
     document.body.classList.remove("focus-gul");
@@ -151,38 +151,53 @@ export const Configurator = () => {
         <div className={classes.colorsContainer}>
           <div
             onClick={() => setColorTheme("digdir")}
-            className={cn(classes.colors, classes.theme1, {
+            className={cn(classes.colorPicker, classes.theme1, {
               [classes.colorsActive]: configuration.colorTheme === "digdir",
             })}
           >
-            <div className={classes.color}></div>
-            <div className={classes.color}></div>
-            <div className={classes.color}></div>
-            <div className={classes.color}></div>
+            <div className={classes.colors}>
+              <div className={classes.color}></div>
+              <div className={classes.color}></div>
+              <div className={classes.color}></div>
+              <div className={classes.color}></div>
+            </div>
+            <Heading size="xxsmall" level={2}>
+              Digdir
+            </Heading>
           </div>
 
           <div
             onClick={() => setColorTheme("tilsynet")}
-            className={cn(classes.colors, classes.theme2, {
+            className={cn(classes.colorPicker, classes.theme2, {
               [classes.colorsActive]: configuration.colorTheme === "tilsynet",
             })}
           >
-            <div className={classes.color}></div>
-            <div className={classes.color}></div>
-            <div className={classes.color}></div>
-            <div className={classes.color}></div>
+            <div className={classes.colors}>
+              <div className={classes.color}></div>
+              <div className={classes.color}></div>
+              <div className={classes.color}></div>
+              <div className={classes.color}></div>
+            </div>
+            <Heading size="xxsmall" level={2}>
+              Tilsynet
+            </Heading>
           </div>
 
           <div
             onClick={() => setColorTheme("altinn")}
-            className={cn(classes.colors, classes.theme3, {
+            className={cn(classes.colorPicker, classes.theme3, {
               [classes.colorsActive]: configuration.colorTheme === "altinn",
             })}
           >
-            <div className={classes.color}></div>
-            <div className={classes.color}></div>
-            <div className={classes.color}></div>
-            <div className={classes.color}></div>
+            <div className={classes.colors}>
+              <div className={classes.color}></div>
+              <div className={classes.color}></div>
+              <div className={classes.color}></div>
+              <div className={classes.color}></div>
+            </div>
+            <Heading size="xxsmall" level={2}>
+              Altinn
+            </Heading>
           </div>
         </div>
 
