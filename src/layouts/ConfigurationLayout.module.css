@@ -24,7 +24,7 @@
   background-color: white;
   z-index: 5;
   padding: 32px;
-  box-shadow: var(--fds-shadow-small);
+  box-shadow: var(--fds-shadow-medium);
   transition: 0.6s all;
 }
 

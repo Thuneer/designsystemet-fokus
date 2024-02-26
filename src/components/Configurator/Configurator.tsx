@@ -1,6 +1,6 @@
 import classes from "./Configurator.module.css";
 import cn from "classnames";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import {
   XMarkIcon,
@@ -18,14 +18,26 @@ import { ConfigurationContext } from "@/contexts/ConfigurationContext";
 export const Configurator = () => {
   const { configuration, setConfiguration } = useContext(ConfigurationContext);
 
-  const setThemeFunc = (theme: string) => {
-    document.body.classList.remove("lightmode");
-    document.body.classList.remove("darkmode");
-    document.body.classList.add(theme);
+  useEffect(() => {
+    document.body.classList.add("theme-digdir");
+  }, [configuration.theme]);
+
+  const setColorTheme = (theme: string) => {
+    setConfiguration({ ...configuration, colorTheme: theme });
+    document.body.classList.remove("theme-digdir");
+    document.body.classList.remove("theme-tilsynet");
+    document.body.classList.remove("theme-altinn");
+    document.body.classList.add("theme-" + theme);
   };
 
-  const test = (e: any) => {
-    setThemeFunc(e.target.checked ? "darkmode" : "lightmode");
+  const setTheme = (e: any) => {
+    setConfiguration({
+      ...configuration,
+      theme: e.target.checked ? "darkmode" : "lightmode",
+    });
+    document.body.classList.remove("lightmode");
+    document.body.classList.remove("darkmode");
+    document.body.classList.add(e.target.checked ? "darkmode" : "lightmode");
   };
 
   const setDevice = (device: string) => {
@@ -75,7 +87,7 @@ export const Configurator = () => {
   ];
 
   return (
-    <div className={classes.page}>
+    <div className={classes.configurator}>
       <button
         className={classes.toggle}
         onClick={() =>
@@ -103,11 +115,11 @@ export const Configurator = () => {
         <div className={classes.device}>
           <button
             className={cn(classes.deviceBtn, {
-              [classes.activeDevice]: configuration.device === "mobile",
+              [classes.activeDevice]: configuration.device === "desktop",
             })}
-            onClick={() => setDevice("mobile")}
+            onClick={() => setDevice("desktop")}
           >
-            <MobileSmallIcon title="a11y-title" fontSize="1.5rem" />
+            <MonitorIcon title="a11y-title" fontSize="1.5rem" />
           </button>
           <button
             className={cn(classes.deviceBtn, {
@@ -119,11 +131,11 @@ export const Configurator = () => {
           </button>
           <button
             className={cn(classes.deviceBtn, {
-              [classes.activeDevice]: configuration.device === "desktop",
+              [classes.activeDevice]: configuration.device === "mobile",
             })}
-            onClick={() => setDevice("desktop")}
+            onClick={() => setDevice("mobile")}
           >
-            <MonitorIcon title="a11y-title" fontSize="1.5rem" />
+            <MobileSmallIcon title="a11y-title" fontSize="1.5rem" />
           </button>
         </div>
 
@@ -139,9 +151,49 @@ export const Configurator = () => {
           />
         </div>
 
+        <div className={classes.label}>Fargetema</div>
+
+        <div className={classes.colorsContainer}>
+          <div
+            onClick={() => setColorTheme("digdir")}
+            className={cn(classes.colors, classes.theme1, {
+              [classes.colorsActive]: configuration.colorTheme === "digdir",
+            })}
+          >
+            <div className={classes.color}></div>
+            <div className={classes.color}></div>
+            <div className={classes.color}></div>
+            <div className={classes.color}></div>
+          </div>
+
+          <div
+            onClick={() => setColorTheme("tilsynet")}
+            className={cn(classes.colors, classes.theme2, {
+              [classes.colorsActive]: configuration.colorTheme === "tilsynet",
+            })}
+          >
+            <div className={classes.color}></div>
+            <div className={classes.color}></div>
+            <div className={classes.color}></div>
+            <div className={classes.color}></div>
+          </div>
+
+          <div
+            onClick={() => setColorTheme("altinn")}
+            className={cn(classes.colors, classes.theme3, {
+              [classes.colorsActive]: configuration.colorTheme === "altinn",
+            })}
+          >
+            <div className={classes.color}></div>
+            <div className={classes.color}></div>
+            <div className={classes.color}></div>
+            <div className={classes.color}></div>
+          </div>
+        </div>
+
         <div className={classes.label}>Darkmode</div>
 
-        <Switch position="left" size="medium" onChange={(e) => test(e)}>
+        <Switch position="left" size="small" onChange={(e) => setTheme(e)}>
           Skru på darkmode
         </Switch>
       </div>

@@ -2,6 +2,7 @@ import { createContext } from "react";
 
 export type ConfigurationType = {
   theme: string;
+  colorTheme: string;
   fokus: string;
   device: string;
   paneState: boolean;
@@ -9,6 +10,7 @@ export type ConfigurationType = {
 
 const Configuration: ConfigurationType = {
   theme: "lightmode",
+  colorTheme: "digdir",
   fokus: "transparent",
   device: "desktop",
   paneState: true,

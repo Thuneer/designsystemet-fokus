@@ -8,6 +8,7 @@ import { useState } from "react";
 export default function App({ Component, pageProps }: AppProps) {
   const [configuration, setConfiguration] = useState({
     theme: "lightmode",
+    colorTheme: "digdir",
     fokus: "transparent",
     device: "desktop",
     paneState: true,
