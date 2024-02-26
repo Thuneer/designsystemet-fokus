@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
-import { Bar } from "@/components/Bar/Bar";
+import { Configurator } from "@/components/Configurator/Configurator";
 import classes from "./Login.module.css";
 import {
   Heading,
@@ -35,45 +35,46 @@ export default function Login() {
       </Head>
       <SkipLink href="#main-content">Hopp til hovedinnhold</SkipLink>
       <main className={`${styles.main} ${inter.className}`}>
-        <Bar />
-        <div className={classes.container}>
-          <div className={classes.form}>
-            <Heading size="small">Registerer ny bruker</Heading>
+        <Configurator>
+          <div className={classes.container}>
+            <div className={classes.form}>
+              <Heading size="small">Registerer ny bruker</Heading>
 
-            <Textfield
-              description=""
-              label="Brukernavn"
-              size="medium"
-              placeholder="Ola Normann"
-            />
+              <Textfield
+                description=""
+                label="Brukernavn"
+                size="medium"
+                placeholder="Ola Normann"
+              />
 
-            <Textfield
-              description=""
-              label="Passord"
-              size="medium"
-              placeholder="ola@gmail.com"
-            />
+              <Textfield
+                description=""
+                label="Passord"
+                size="medium"
+                placeholder="ola@gmail.com"
+              />
 
-            <Radio.Group
-              error=""
-              legend="Rolle"
-              onChange={function noRefCheck() {}}
-              size="medium"
-            >
-              <Radio value="vanilje">Admin</Radio>
-              <Radio value="jordbær">Editor</Radio>
-              <Radio value="sjokolade">Subscriber</Radio>
-            </Radio.Group>
+              <Radio.Group
+                error=""
+                legend="Rolle"
+                onChange={function noRefCheck() {}}
+                size="medium"
+              >
+                <Radio value="vanilje">Admin</Radio>
+                <Radio value="jordbær">Editor</Radio>
+                <Radio value="sjokolade">Subscriber</Radio>
+              </Radio.Group>
 
-            <Checkbox size="medium" value="value">
-              Abonner på nyhetsbrev
-            </Checkbox>
+              <Checkbox size="medium" value="value">
+                Abonner på nyhetsbrev
+              </Checkbox>
 
-            <Button asChild>
-              <NextLink href="/dashboard">Registrer ny bruker</NextLink>
-            </Button>
+              <Button asChild>
+                <NextLink href="/dashboard">Registrer ny bruker</NextLink>
+              </Button>
+            </div>
           </div>
-        </div>
+        </Configurator>
       </main>
     </>
   );

@@ -12,7 +12,7 @@
   left: 300px;
   top: 0;
   right: 0;
-  height: 54px;
+  height: 72px;
   padding: 0 32px;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
 .main {
   position: absolute;
   left: 332px;
-  top: 86px;
+  top: 72px;
   bottom: 32px;
   right: 32px;
   display: flex;

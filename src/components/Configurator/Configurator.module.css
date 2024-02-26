@@ -1,8 +1,35 @@
+.contentPadding {
+  width: calc(100vw - 400px) !important;
+}
+
+.content {
+  transition: 0.6s all;
+  position: relative;
+  width: 100%;
+}
+
+.pane {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  bottom: 0;
+  width: 400px;
+  background-color: white;
+  z-index: 5;
+  padding: 32px;
+  box-shadow: var(--fds-shadow-small);
+  transition: 0.6s all;
+}
+
+.paneOpen {
+  right: 0;
+}
+
 .toggle {
   position: fixed;
-  top: 22px;
-  right: 22px;
-  z-index: 1;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
   height: 44px;
   width: 44px;
   border-radius: 50%;
@@ -22,14 +49,6 @@
 .back svg {
   margin-left: -7px;
   margin-right: 3px;
-}
-
-.pane .slide-pane__content {
-  padding: 32px !important;
-}
-
-.slide-pane__content {
-  padding: 32px !important;
 }
 
 .pane h1 {
@@ -147,4 +166,39 @@
 }
 .theme2 .color:nth-child(5) {
   background-color: var(--fds-semantic-text-neutral-default);
+}
+
+.device {
+  display: flex;
+  margin-top: 4px;
+}
+
+.deviceBtn {
+  border: none;
+  background-color: rgb(233, 233, 233);
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile {
+  width: 360px !important;
+  height: 720px !important;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 8px solid rgb(99, 99, 99);
+  position: relative;
+}
+
+.tablet {
+  width: 820px !important;
+  height: 1180px !important;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 8px solid rgb(99, 99, 99);
+  position: relative;
 }

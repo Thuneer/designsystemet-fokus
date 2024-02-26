@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
-import { Bar } from "@/components/Bar/Bar";
+import { Configurator } from "@/components/Configurator/Configurator";
 import classes from "./Dashboard.module.css";
 import {
   Heading,
@@ -30,19 +30,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Bar />
-        <div className={classes.page}>
-          <div className={classes.toolbar}>
-            <Toolbar />
+        <Configurator>
+          <div className={classes.page}>
+            <div className={classes.toolbar}>
+              <Toolbar />
+            </div>
+            <div className={classes.sidebar}>
+              <Sidebar />
+            </div>
+            <div className={classes.main}>
+              <div className={classes.left}>
+                <Heading size="xsmall">Brukere</Heading>
+              </div>
+              <div className={classes.right}>
+                <Heading size="xsmall">Info</Heading>
+              </div>
+            </div>
           </div>
-          <div className={classes.sidebar}>
-            <Sidebar />
-          </div>
-          <div className={classes.main}>
-            <div className={classes.left}>left</div>
-            <div className={classes.right}>right</div>
-          </div>
-        </div>
+        </Configurator>
       </main>
     </>
   );

@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
-import { Bar } from "@/components/Bar/Bar";
+import { Configurator } from "@/components/Configurator/Configurator";
 import classes from "./index.module.css";
 import {
   Heading,
@@ -29,89 +29,90 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Bar />
-        <Header />
-        <div className={classes.banner}>
-          <Container className={classes.bannerContainer}>
-            <Row className={classes.bannerRow}>
-              <Col className={classes.bannerLeft}>
-                <img src="img/ill.svg" alt="" />
-              </Col>
-              <Col className={classes.bannerRight}>
-                <Heading size="large">Digitalisering av Norge</Heading>
-                <Ingress>
-                  The and you of an the and, want odd else even should at that
-                  or select but parts which him sooner world is founding of to
-                  some address your influenced himself are in, he by everyday
-                </Ingress>
-                <Link href="#">Les mer om digitalisering</Link>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <Configurator>
+          <Header />
+          <div className={classes.banner}>
+            <Container className={classes.bannerContainer}>
+              <Row className={classes.bannerRow}>
+                <Col className={classes.bannerLeft}>
+                  <img src="img/ill.svg" alt="" />
+                </Col>
+                <Col className={classes.bannerRight}>
+                  <Heading size="large">Digitalisering av Norge</Heading>
+                  <Ingress>
+                    The and you of an the and, want odd else even should at that
+                    or select but parts which him sooner world is founding of to
+                    some address your influenced himself are in, he by everyday
+                  </Ingress>
+                  <Link href="#">Les mer om digitalisering</Link>
+                </Col>
+              </Row>
+            </Container>
+          </div>
 
-        <div className={classes.cards}>
-          <Heading size="large" className={classes.cardsHeading}>
-            Hva kan vi hjelpe deg med?
-          </Heading>
-          <Container>
-            <Row>
-              <Col>
-                <Card asChild color="neutral" isLink>
-                  <NextLink href="/article" rel="noopener noreferrer">
-                    <Card.Media>
-                      <img alt="katt 2" src="img/landscape1.png" />
-                    </Card.Media>
-                    <Card.Header>
-                      <Heading size="small">Tilgjengelighet</Heading>
-                    </Card.Header>
-                    <Card.Content>
-                      Most provide as with carried business are much better more
-                      the perfected designer. Writing slightly explain desk
-                      unable at supposedly about this
-                    </Card.Content>
-                  </NextLink>
-                </Card>
-              </Col>
-              <Col>
-                <Card asChild color="neutral" isLink>
-                  <NextLink href="/article" rel="noopener noreferrer">
-                    <Card.Media>
-                      <img alt="katt 2" src="img/landscape2.png" />
-                    </Card.Media>
-                    <Card.Header>
-                      <Heading size="small">Lær om data deling</Heading>
-                    </Card.Header>
-                    <Card.Content>
-                      Most provide as with carried business are much better more
-                      the perfected designer. Writing slightly explain desk
-                      unable at supposedly about this
-                    </Card.Content>
-                  </NextLink>
-                </Card>
-              </Col>
-              <Col>
-                <Card asChild color="neutral" isLink>
-                  <NextLink href="/article" rel="noopener noreferrer">
-                    <Card.Media>
-                      <img alt="katt 2" src="img/landscape3.png" />
-                    </Card.Media>
-                    <Card.Header>
-                      <Heading size="small">Bli digital borger</Heading>
-                    </Card.Header>
-                    <Card.Content>
-                      Most provide as with carried business are much better more
-                      the perfected designer. Writing slightly explain desk
-                      unable at supposedly about this
-                    </Card.Content>
-                  </NextLink>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+          <div className={classes.cards}>
+            <Heading size="large" className={classes.cardsHeading}>
+              Hva kan vi hjelpe deg med?
+            </Heading>
+            <Container>
+              <Row>
+                <Col>
+                  <Card asChild color="neutral" isLink>
+                    <NextLink href="/article" rel="noopener noreferrer">
+                      <Card.Media>
+                        <img alt="katt 2" src="img/landscape1.png" />
+                      </Card.Media>
+                      <Card.Header>
+                        <Heading size="small">Tilgjengelighet</Heading>
+                      </Card.Header>
+                      <Card.Content>
+                        Most provide as with carried business are much better
+                        more the perfected designer. Writing slightly explain
+                        desk unable at supposedly about this
+                      </Card.Content>
+                    </NextLink>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card asChild color="neutral" isLink>
+                    <NextLink href="/article" rel="noopener noreferrer">
+                      <Card.Media>
+                        <img alt="katt 2" src="img/landscape2.png" />
+                      </Card.Media>
+                      <Card.Header>
+                        <Heading size="small">Lær om data deling</Heading>
+                      </Card.Header>
+                      <Card.Content>
+                        Most provide as with carried business are much better
+                        more the perfected designer. Writing slightly explain
+                        desk unable at supposedly about this
+                      </Card.Content>
+                    </NextLink>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card asChild color="neutral" isLink>
+                    <NextLink href="/article" rel="noopener noreferrer">
+                      <Card.Media>
+                        <img alt="katt 2" src="img/landscape3.png" />
+                      </Card.Media>
+                      <Card.Header>
+                        <Heading size="small">Bli digital borger</Heading>
+                      </Card.Header>
+                      <Card.Content>
+                        Most provide as with carried business are much better
+                        more the perfected designer. Writing slightly explain
+                        desk unable at supposedly about this
+                      </Card.Content>
+                    </NextLink>
+                  </Card>
+                </Col>
+              </Row>
+            </Container>
+          </div>
 
-        <Footer />
+          <Footer />
+        </Configurator>
       </main>
     </>
   );

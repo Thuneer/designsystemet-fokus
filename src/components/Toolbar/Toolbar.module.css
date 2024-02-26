@@ -2,5 +2,57 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 98%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconBtn {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBtn:hover {
+  transition: 0.1s all;
+  background-color: var(--fds-semantic-surface-action-first-subtle-hover);
+  cursor: pointer;
+}
+
+.profileBtn {
+  display: flex;
+  align-items: center;
+  border: none;
+  gap: 10px;
+}
+
+.avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: block;
+}
+
+.avatar img {
+  height: 100%;
   width: 100%;
+}
+
+.searchField {
+  width: 250px !important;
 }
