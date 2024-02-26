@@ -1,0 +1,9 @@
+.tabFocus:focus-visible {
+  --fds-focus-border-width: 3px;
+  box-shadow: 0 0 0 var(--fds-focus-border-width)
+    var(--fds-semantic-border-focus-boxshadow) !important;
+  outline: var(--fds-focus-border-width) solid
+    var(--fds-semantic-border-focus-outline) !important;
+  outline-offset: var(--fds-focus-border-width);
+  background-color: transparent !important;
+}

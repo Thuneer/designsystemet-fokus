@@ -9,6 +9,7 @@ import { ConfigurationLayout } from "@/layouts/ConfigurationLayout";
 import classes from "./index.module.css";
 import { Heading, Ingress, Link, Card } from "@digdir/design-system-react";
 import NextLink from "next/link";
+import utilClasses from "../../styles/utlilty.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -156,7 +157,9 @@ export default function Home() {
                     or select but parts which him sooner world is founding of to
                     some address your influenced himself are in, he by everyday
                   </Ingress>
-                  <Link href="#">Les mer om digitalisering</Link>
+                  <Link className={utilClasses.tabFocus} href="#">
+                    Les mer om digitalisering
+                  </Link>
                 </Col>
               </Row>
             </Container>

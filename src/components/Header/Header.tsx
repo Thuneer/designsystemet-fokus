@@ -3,6 +3,8 @@ import classes from "./Header.module.css";
 import { Container } from "react-bootstrap";
 import { Button } from "@digdir/design-system-react";
 import Link from "next/link";
+import cn from "classnames";
+import utilClasses from "../../styles/utlilty.module.css";
 
 export const Header = () => {
   return (
@@ -49,27 +51,28 @@ export const Header = () => {
         <div className={classes.middle}>
           <ul className={classes.menu}>
             <li>
-              <a href="#" className={classes.link}>
+              <a href="#" className={cn(classes.link, utilClasses["tabFocus"])}>
                 Områder
               </a>
             </li>
             <li>
-              <a href="#" className={classes.link}>
+              <a href="#" className={cn(classes.link, utilClasses["tabFocus"])}>
                 Rapporter
               </a>
             </li>
             <li>
-              <a href="#" className={classes.link}>
+              <a href="#" className={cn(classes.link, utilClasses["tabFocus"])}>
                 Om Digdir
               </a>
             </li>
             <li>
-              <a href="#" className={classes.link}>
+              <a href="#" className={cn(classes.link, utilClasses["tabFocus"])}>
                 Kontakt oss
               </a>
             </li>
           </ul>
         </div>
+
         <div className={classes.right}>
           <Button variant="secondary" size="small" asChild>
             <Link href="/login">Registrer ny bruker</Link>

@@ -10,7 +10,7 @@ import {
   TabletIcon,
   MonitorIcon,
 } from "@navikt/aksel-icons";
-import { Heading, Switch } from "@digdir/design-system-react";
+import { Heading, Switch, ToggleGroup } from "@digdir/design-system-react";
 import NextLink from "next/link";
 import { Slider } from "@mui/material";
 import { ConfigurationContext } from "@/contexts/ConfigurationContext";
@@ -28,6 +28,15 @@ export const Configurator = () => {
     document.body.classList.remove("theme-tilsynet");
     document.body.classList.remove("theme-altinn");
     document.body.classList.add("theme-" + theme);
+  };
+
+  const setFocus = (value: string) => {
+    const val = value.toLocaleLowerCase();
+    setConfiguration({ ...configuration, colorTheme: val });
+    document.body.classList.remove("focus-hvit");
+    document.body.classList.remove("focus-transparent");
+    document.body.classList.remove("focus-gul");
+    document.body.classList.add("focus-" + val);
   };
 
   const setTheme = (e: any) => {
@@ -68,21 +77,6 @@ export const Configurator = () => {
     {
       value: 100,
       label: "16px",
-    },
-  ];
-
-  const marks2 = [
-    {
-      value: 0,
-      label: "Hvit",
-    },
-    {
-      value: 50,
-      label: "Transparent",
-    },
-    {
-      value: 100,
-      label: "Gul",
     },
   ];
 
@@ -139,17 +133,18 @@ export const Configurator = () => {
           </button>
         </div>
 
-        <div className={classes.label}>Fokus typer</div>
+        <div className={classes.label}>Fokustype</div>
 
-        <div className={classes.sliderContainer}>
-          <Slider
-            aria-label="Custom marks"
-            defaultValue={0}
-            step={50}
-            valueLabelDisplay="auto"
-            marks={marks2}
-          />
-        </div>
+        <ToggleGroup
+          defaultValue="Hvit"
+          name="toggle-group-nuts"
+          onChange={(e) => setFocus(e)}
+          size="small"
+        >
+          <ToggleGroup.Item>Hvit</ToggleGroup.Item>
+          <ToggleGroup.Item>Transparent</ToggleGroup.Item>
+          <ToggleGroup.Item>Gul</ToggleGroup.Item>
+        </ToggleGroup>
 
         <div className={classes.label}>Fargetema</div>
 
