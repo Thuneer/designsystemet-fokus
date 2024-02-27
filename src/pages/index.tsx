@@ -39,7 +39,7 @@ export default function Home() {
                   </NextLink>
                 </Col>
                 <Col>
-                  <NextLink href="/admin" className={classes.card}>
+                  <NextLink href="/admin/login" className={classes.card}>
                     <img src="img/admin.png" alt="" className={classes.img} />
                     <div className={classes.cardContent}>
                       <Heading size="small">Admin grensesnitt</Heading>

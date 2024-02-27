@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const value = { configuration, setConfiguration };
   return (
     <ConfigurationContext.Provider value={value}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </ConfigurationContext.Provider>
   );
 }

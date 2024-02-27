@@ -5,6 +5,7 @@ import { Button } from "@digdir/design-system-react";
 import Link from "next/link";
 import cn from "classnames";
 import utilClasses from "../../styles/utlilty.module.css";
+import { MenuHamburgerIcon, MagnifyingGlassIcon } from "@navikt/aksel-icons";
 
 export const Header = () => {
   return (
@@ -74,11 +75,17 @@ export const Header = () => {
         </div>
 
         <div className={classes.right}>
-          <Button variant="secondary" size="small" asChild>
-            <Link href="/login">Registrer ny bruker</Link>
+          <Button variant="tertiary" size="medium" color="second" asChild>
+            <Link href="#">
+              <MenuHamburgerIcon title="a11y-title" fontSize="5.5rem" />
+              Meny
+            </Link>
           </Button>
-          <Button size="small" asChild>
-            <Link href="/login">Registrer ny bruker</Link>
+          <Button variant="tertiary" color="second" size="medium" asChild>
+            <Link href="#">
+              <MagnifyingGlassIcon title="a11y-title" fontSize="5.5rem" />
+              Søk
+            </Link>
           </Button>
         </div>
       </Container>

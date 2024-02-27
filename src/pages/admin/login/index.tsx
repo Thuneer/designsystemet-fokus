@@ -32,7 +32,34 @@ export default function Login() {
         <ConfigurationLayout>
           <div className={classes.container}>
             <div className={classes.form}>
-              <Heading size="small">Registerer ny bruker</Heading>
+              <div className={classes.header}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="41"
+                  viewBox="0 0 40 41"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_1023_1931)">
+                    <path
+                      d="M20.8624 0.675171H1.48601C1.27488 0.675171 1.0724 0.759043 0.923105 0.908335C0.773813 1.05763 0.689941 1.26011 0.689941 1.47124V39.2687C0.689941 39.4798 0.773813 39.6823 0.923105 39.8316C1.0724 39.9809 1.27488 40.0648 1.48601 40.0648H20.8624C25.9867 39.919 30.8523 37.781 34.4254 34.1049C37.9984 30.4288 39.9973 25.5044 39.9973 20.3779C39.9973 15.2515 37.9984 10.3271 34.4254 6.65099C30.8523 2.97489 25.9867 0.836835 20.8624 0.691093V0.675171ZM22.757 34.1261C19.8254 34.6306 16.8092 34.1889 14.1452 32.865C11.4813 31.5411 9.3079 29.4037 7.93972 26.7622C6.57153 24.1207 6.0796 21.1123 6.53516 18.1726C6.99071 15.2329 8.37009 12.5145 10.4736 10.411C12.5771 8.30756 15.2955 6.92817 18.2352 6.47262C21.1749 6.01707 24.1832 6.509 26.8247 7.87718C29.4662 9.24536 31.6036 11.4188 32.9276 14.0827C34.2515 16.7466 34.6932 19.7628 34.1886 22.6945C33.6976 25.5475 32.3349 28.1784 30.2879 30.2254C28.2409 32.2724 25.61 33.6351 22.757 34.1261"
+                      fill="#C2132C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1023_1931">
+                      <rect
+                        width="39.31"
+                        height="39.3896"
+                        fill="white"
+                        transform="translate(0.689941 0.675171)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <Heading size="small">Registerer ny bruker</Heading>
+              </div>
 
               <Textfield
                 description=""
@@ -64,7 +91,7 @@ export default function Login() {
               </Checkbox>
 
               <Button asChild>
-                <NextLink href="/dashboard">Registrer ny bruker</NextLink>
+                <NextLink href="/admin">Registrer ny bruker</NextLink>
               </Button>
             </div>
           </div>

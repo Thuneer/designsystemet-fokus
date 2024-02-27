@@ -90,6 +90,10 @@ body.darkmode *[class*="website_banner"] {
   background-color: var(--background-darker) !important;
 }
 
+body.darkmode *[class*="Login_header"] svg path {
+  fill: white;
+}
+
 body.theme-tilsynet {
   --fds-brand-alt1-100: #efeffb;
   --fds-brand-alt1-200: #dedff6;

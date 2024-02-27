@@ -21,7 +21,7 @@
 .right {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 4px;
 }
 
 .menu {

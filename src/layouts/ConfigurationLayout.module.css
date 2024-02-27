@@ -6,7 +6,6 @@
   transition: 0.6s all;
   position: relative;
   width: 100%;
-  min-height: 100vh;
 }
 
 .contentSmall {
@@ -26,6 +25,7 @@
   padding: 32px;
   box-shadow: var(--fds-shadow-medium);
   transition: 0.6s all;
+  overflow-y: auto;
 }
 
 .paneOpen {
@@ -43,6 +43,7 @@
   overflow: hidden;
   border: 8px solid rgb(25, 39, 65);
   position: relative;
+  overflow-y: auto;
 }
 
 .tablet {
@@ -52,4 +53,5 @@
   overflow: hidden;
   border: 8px solid rgb(25, 39, 65);
   position: relative;
+  overflow-y: auto;
 }

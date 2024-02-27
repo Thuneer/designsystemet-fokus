@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 490px;
+  background-color: var(--foreground-color);
+  padding: 42px;
+  box-shadow: var(--fds-shadow-xsmall);
+  border-radius: 8px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}

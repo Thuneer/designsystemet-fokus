@@ -10,6 +10,8 @@ import classes from "./index.module.css";
 import { Heading, Ingress, Link, Card } from "@digdir/design-system-react";
 import NextLink from "next/link";
 import utilClasses from "../../styles/utlilty.module.css";
+import { ArrowRightIcon } from "@navikt/aksel-icons";
+import cn from "classnames";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -157,7 +159,10 @@ export default function Home() {
                     or select but parts which him sooner world is founding of to
                     some address your influenced himself are in, he by everyday
                   </Ingress>
-                  <Link className={utilClasses.tabFocus} href="#">
+                  <Link
+                    className={cn(utilClasses.tabFocus, classes.bannerLink)}
+                    href="#"
+                  >
                     Les mer om digitalisering
                   </Link>
                 </Col>
@@ -166,7 +171,7 @@ export default function Home() {
           </div>
 
           <div className={classes.cards}>
-            <Heading size="large" className={classes.cardsHeading}>
+            <Heading size="medium" className={classes.cardsHeading}>
               Hva kan vi hjelpe deg med?
             </Heading>
             <Container>
